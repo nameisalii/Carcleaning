@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Das Car Care offers professional car cleaning services and premium car cleaning products. Book now for a sparkling clean vehicle!">
-    <meta name="keywords" content="car cleaning, car detailing, car wash, auto detailing, car care products">
-    <title>Ernesto Car Care - Professional Car Cleaning Services</title>
+    <meta name="description" content="Ernesto Car Wrap offers professional car wrapping services and premium vinyl wrap products. Transform your vehicle with our custom wraps!">
+    <meta name="keywords" content="car wrapping, vinyl wrap, car customization, auto wrapping, car wrap products">
+    <title>Ernesto Car Wrap - Professional Car Wrapping Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -252,7 +252,7 @@
         .service-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #007bff;
+            color: #0056b3;
         }
 
         .service-card h3 {
@@ -266,10 +266,80 @@
             line-height: 1.6;
         }
 
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .pricing-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .pricing-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+        }
+
         /* Products Section */
         .products {
             padding: 100px 0;
-            background: #f8f9fa;
+            background: white;
         }
 
         .products h2 {
@@ -651,7 +721,7 @@
                 text-align: center;
             }
 
-            .services-grid, .products-grid {
+            .services-grid, .products-grid, .pricing-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -672,12 +742,13 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Das Car Care</div>
+                <div class="logo">Ernesto Car Wrap</div>
                 <nav>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#contact">Contact Now</a></li>
                     </ul>
@@ -692,12 +763,12 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>Das Car Care</h1>
-                    <p class="hero-quote">"Drive clean, shine bright - let us make your car sparkle!"</p>
+                    <h1>Ernesto Car Wrap</h1>
+                    <p class="hero-quote">"Transform your ride, wrap it right - let us give your car a bold new look!"</p>
                     <a href="#contact" class="cta-button">Book Now</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://www.autowashmachine.com/wp-content/uploads/2024/07/606605794a8f57173ccbb5b4e9f0d265.jpg" alt="Polished car">
+                    <img src="https://www.tintingchicago.com/wp-content/uploads/2022/10/matte-vinyl-wrap-get-a-sophisticated-look-protect-your-car.jpg" alt="Car with vinyl wrap">
                 </div>
             </div>
         </div>
@@ -709,10 +780,10 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Us</h2>
-                    <p>Das Car Care specializes in professional car cleaning services, delivering showroom-quality results. Our team uses eco-friendly products to ensure your vehicle looks pristine inside and out. With a passion for cars and a commitment to customer satisfaction, we provide reliable, high-quality detailing tailored to your needs!</p>
+                    <p>Ernesto Car Wrap specializes in professional car wrapping services, delivering stunning, durable vinyl wraps. Our team uses premium materials to transform your vehicle’s appearance with precision and style. With a passion for customization and a commitment to customer satisfaction, we provide high-quality wraps tailored to your vision!</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://www.rd.com/wp-content/uploads/2024/02/GettyImages-1344993821.jpg" alt="Car cleaning services illustration">
+                    <img src="https://lirp.cdn-website.com/396ea3d5/dms3rep/multi/opt/vinyl+wraps-1920w.jpg" alt="Car wrapping services illustration">
                 </div>
             </div>
         </div>
@@ -724,19 +795,46 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-car"></i></div>
-                    <h3>Interior Detailing</h3>
-                    <p>Thorough cleaning of seats, carpets, and dashboards, removing dirt and odors for a fresh interior.</p>
+                    <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+                    <h3>Vinyl Wrap Installation</h3>
+                    <p>Custom vinyl wraps applied with precision for a unique vehicle appearance.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
-                    <h3>Exterior Wash & Wax</h3>
-                    <p>Hand wash, polish, and wax to restore your car's shine and protect its paint.</p>
+                    <div class="service-icon"><i class="fa-solid fa-shapes"></i></div>
+                    <h3>Partial Wrap Design</h3>
+                    <p>Targeted wrap applications for hoods, roofs, or accents to enhance your car’s style.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
-                    <h3>Full Detailing Package</h3>
-                    <p>Complete interior and exterior cleaning, including waxing and tire shine, for a like-new look.</p>
+                    <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <h3>Full Vehicle Wrap</h3>
+                    <p>Complete vehicle transformation with high-quality vinyl for a bold new look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Our Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Wrapping</h3>
+                    <div class="pricing-price">$800</div>
+                    <p>Partial vehicle wrap with standard vinyl, perfect for accents or smaller areas.</p>
+                    <a href="#contact" class="pricing-button">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Full Wrapping</h3>
+                    <div class="pricing-price">$1400</div>
+                    <p>Complete vehicle wrap with high-quality vinyl for a full transformation.</p>
+                    <a href="#contact" class="pricing-button">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium Wrapping</h3>
+                    <div class="pricing-price">$1800</div>
+                    <p>Full wrap with premium materials and custom designs for a standout look.</p>
+                    <a href="#contact" class="pricing-button">Get Started</a>
                 </div>
             </div>
         </div>
@@ -745,42 +843,42 @@
     <!-- Products Section -->
     <section id="products" class="products">
         <div class="container">
-            <h2>Shop Car Cleaning Products</h2>
+            <h2>Shop Car Wrapping Products</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <img src="https://vader-prod.s3.amazonaws.com/1684784699-912Gjnquc5L.jpg" alt="Bottle of car shampoo" class="product-image">
-                    <h3>Car Shampoo</h3>
-                    <p>High-foam, pH-neutral shampoo for a safe, scratch-free wash.</p>
-                    <div class="product-price">$10.99</div>
-                    <a href="#" class="add-to-cart" data-product="Car Shampoo" data-price="10.99">Add to Cart</a>
+                    <img src="https://m.media-amazon.com/images/I/71d5QbPbUtL._AC_UF894,1000_QL80_.jpg" alt="Roll of matte vinyl wrap film" class="product-image">
+                    <h3>Vinyl Wrap Film (Matte)</h3>
+                    <p>High-quality matte vinyl for custom wraps with a sleek, non-reflective finish.</p>
+                    <div class="product-price">$49.99</div>
+                    <a href="#" class="add-to-cart" data-product="Vinyl Wrap Film (Matte)" data-price="49.99">Add to Cart</a>
                 </div>
                 <div class="product-card">
-                    <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1677510693-invisible-glass-1677510553.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=980:*" alt="Can of wax polish" class="product-image">
-                    <h3>Wax Polish</h3>
-                    <p>Premium carnauba wax for a deep shine and long-lasting protection.</p>
-                    <div class="product-price">$15.99</div>
-                    <a href="#" class="add-to-cart" data-product="Wax Polish" data-price="15.99">Add to Cart</a>
+                    <img src="https://www.wrapfresh.com/cdn/shop/files/Complete_Kit_Gloss-Dark.jpg?v=1738178464" alt="Roll of gloss vinyl wrap film" class="product-image">
+                    <h3>Vinyl Wrap Film (Gloss)</h3>
+                    <p>Glossy vinyl for a shiny, eye-catching finish on your vehicle.</p>
+                    <div class="product-price">$54.99</div>
+                    <a href="#" class="add-to-cart" data-product="Vinyl Wrap Film (Gloss)" data-price="54.99">Add to Cart</a>
                 </div>
                 <div class="product-card">
-                    <img src="https://www.cuttingedgeref.com/wp-content/uploads/2024/07/what-to-use-to-clean-surface-before-painting-car-1080x600.jpg" alt="Spray bottle of tire shine" class="product-image">
-                    <h3>Tire Shine</h3>
-                    <p>Non-greasy spray for glossy, black tires that last.</p>
-                    <div class="product-price">$8.99</div>
-                    <a href="#" class="add-to-cart" data-product="Tire Shine" data-price="8.99">Add to Cart</a>
+                    <img src="https://cdn.shopify.com/s/files/1/0720/8406/2487/files/colorado-springs-3m-wrap_orig.jpg?v=1692262728" alt="Car wrap installation toolkit" class="product-image">
+                    <h3>Installation Toolkit</h3>
+                    <p>Essential tools for precise vinyl wrap application, including squeegees and cutters.</p>
+                    <div class="product-price">$29.99</div>
+                    <a href="#" class="add-to-cart" data-product="Installation Toolkit" data-price="29.99">Add to Cart</a>
                 </div>
                 <div class="product-card">
-                    <img src="https://www.shutterstock.com/image-photo/closeup-hand-using-brush-plastic-600nw-2477469103.jpg" alt="Bottle of interior cleaner" class="product-image">
-                    <h3>Interior Cleaner</h3>
-                    <p>All-purpose cleaner for seats, dashboards, and upholstery.</p>
-                    <div class="product-price">$12.99</div>
-                    <a href="#" class="add-to-cart" data-product="Interior Cleaner" data-price="12.99">Add to Cart</a>
+                    <img src="https://raxtify.com/cdn/shop/files/Laser_Gloss_Pink_Vinyl_Wrap.jpg?v=1720680280" alt="Bottle of wrap cleaning solution" class="product-image">
+                    <h3>Wrap Cleaning Solution</h3>
+                    <p>Safe cleaner designed to maintain and protect vinyl wraps.</p>
+                    <div class="product-price">$19.99</div>
+                    <a href="#" class="add-to-cart" data-product="Wrap Cleaning Solution" data-price="19.99">Add to Cart</a>
                 </div>
                 <div class="product-card">
-                    <img src="https://ceramicpro.com/wp-content/uploads/2021/02/detailing-all-purpose-cleaner.gif" alt="Bottle of glass cleaner" class="product-image">
-                    <h3>Glass Cleaner</h3>
-                    <p>Streak-free formula for crystal-clear windows and mirrors.</p>
-                    <div class="product-price">$9.99</div>
-                    <a href="#" class="add-to-cart" data-product="Glass Cleaner" data-price="9.99">Add to Cart</a>
+                    <img src="https://images-eu.ssl-images-amazon.com/images/I/71T2APCVApL._AC_UL495_SR435,495_.jpg" alt="Roll of color shift vinyl film" class="product-image">
+                    <h3>Color Shift Vinyl</h3>
+                    <p>Premium color-changing vinyl film for a dynamic, head-turning effect.</p>
+                    <div class="product-price">$69.99</div>
+                    <a href="#" class="add-to-cart" data-product="Color Shift Vinyl" data-price="69.99">Add to Cart</a>
                 </div>
             </div>
             <!-- Checkout Section -->
@@ -830,17 +928,17 @@
             <div class="reviews-carousel">
                 <div class="review-card active">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">Das Car Care made my SUV look brand new! The interior detailing was spotless, and the wax job had it shining in the sun. Highly recommend!</p>
+                    <p class="review-text">Ernesto Car Wrap transformed my SUV with a stunning matte black wrap! The quality is top-notch, and it looks amazing. Highly recommend!</p>
                     <p class="reviewer-name">- Lisa Martinez</p>
                 </div>
                 <div class="review-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">Fantastic service! My car's exterior was polished to perfection, and the team was super professional. Will definitely book again!</p>
+                    <p class="review-text">The partial wrap on my car’s hood looks fantastic! The team was professional, and the process was seamless. Will book again!</p>
                     <p class="reviewer-name">- Michael Chen</p>
                 </div>
                 <div class="review-card">
                     <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">The full detailing package was worth every penny. My truck hasn't looked this good since I bought it. Great job, Das Car!</p>
+                    <p class="review-text">My truck’s full wrap is a showstopper! Ernesto’s attention to detail is unmatched. Worth every penny!</p>
                     <p class="reviewer-name">- David Wilson</p>
                 </div>
                 <div class="carousel-nav">
@@ -869,8 +967,8 @@
                     <input type="tel" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Service Description *</label>
-                    <textarea id="description" name="description" placeholder="Please describe the car cleaning services you need..." required></textarea>
+                    <label for="description">Wrap Description *</label>
+                    <textarea id="description" name="description" placeholder="Please describe the car wrapping services you need..." required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Send Request</button>
             </form>
@@ -880,7 +978,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2025 Das Car Care. All rights reserved. Professional car cleaning services you can trust.</p>
+            <p>© 2025 Ernesto Car Wrap. All rights reserved. Professional car wrapping services you can trust.</p>
         </div>
     </footer>
 
@@ -958,7 +1056,7 @@
                 alert('Please fill in all required fields.');
                 return;
             }
-            alert('Thank you for your request! We will contact you within 24 hours to schedule your car cleaning.');
+            alert('Thank you for your request! We will contact you within 24 hours to schedule your car wrapping.');
             this.reset();
         });
 
@@ -1065,7 +1163,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.service-card, .product-card, .review-card').forEach(card => {
+        document.querySelectorAll('.service-card, .product-card, .review-card, .pricing-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
             card.style.transition = 'all 0.6s ease';
