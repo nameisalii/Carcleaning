@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ernesto Car Care offers professional car cleaning services and premium car cleaning products. Book now for a sparkling clean vehicle!">
+    <meta name="keywords" content="car cleaning, car detailing, car wash, auto detailing, car care products">
+    <title>Ernesto Car Care - Professional Car Cleaning Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --header-height: 80px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #007bff 0%, #1a1a1a 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .logo::before {
+            content: "🚗";
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #c0c0c0;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f8f9fa;
+            height: auto;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            margin-top: var(--header-height);
+            padding: 4rem 2rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: stretch;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            max-height: 400px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .hero-image {
+            display: flex;
+            align-items: center;
+            max-height: 400px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Checkout Section */
+        .checkout {
+            padding: 50px 0;
+            background: #fff;
+            display: none;
+        }
+
+        .checkout.active {
+            display: block;
+        }
+
+        .checkout h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .cart-summary {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item span {
+            font-size: 1rem;
+        }
+
+        .cart-item .remove-item {
+            background: #ff5252;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cart-item .remove-item:hover {
+            background: #e63939;
+        }
+
+        .cart-total {
+            text-align: right;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+        }
+
+        .billing-form {
+            display: none;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .billing-form.active {
+            display: block;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 100px 0;
+            background: #1a1a1a;
+            color: white;
+            position: relative;
+        }
+
+        .reviews h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-carousel {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .review-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            display: none;
+        }
+
+        .review-card.active {
+            opacity: 1;
+            display: block;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-nav button {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-nav button:hover {
+            background: rgba(255,255,255,0.4);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #007bff 0%, #1a1a1a 100%);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 2rem 1rem;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-height: none;
+                padding: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image {
+                max-height: 300px;
+            }
+
+            .hero-image img {
+                max-height: 300px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .services-grid, .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .reviews-carousel {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Ernesto Car Care</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact Now</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon" id="cartIcon"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-count" id="cartCount">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Ernesto Car Care</h1>
+                    <p class="hero-quote">"Drive clean, shine bright - let us make your car sparkle!"</p>
+                    <a href="#contact" class="cta-button">Book Now</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1619379827471-1d5a7d5da9b0?auto=format&fit=crop&w=600" alt="Polished car">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>Ernesto Car Care specializes in professional car cleaning services, delivering showroom-quality results. Our team uses eco-friendly products to ensure your vehicle looks pristine inside and out. With a passion for cars and a commitment to customer satisfaction, we provide reliable, high-quality detailing tailored to your needs!</p>
+                </div>
+                <div class="about-image">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23f0f8ff' width='400' height='300'/><path fill='%23007bff' d='M50 100h300v150H50z'/><circle fill='%23c0c0c0' cx='100' cy='250' r='30'/><circle fill='%23c0c0c0' cx='300' cy='250' r='30'/><rect fill='%23ffffff' x='80' y='120' width='80' height='60' rx='5'/><rect fill='%23ffffff' x='240' y='120' width='80' height='60' rx='5'/><path fill='%23ff6b6b' d='M180 180h40v20h-40z'/><text x='200' y='280' text-anchor='middle' fill='%23333' font-family='Arial' font-size='14'>Car Cleaning Services</text></svg>" alt="Car cleaning services illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-car"></i></div>
+                    <h3>Interior Detailing</h3>
+                    <p>Thorough cleaning of seats, carpets, and dashboards, removing dirt and odors for a fresh interior.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
+                    <h3>Exterior Wash & Wax</h3>
+                    <p>Hand wash, polish, and wax to restore your car's shine and protect its paint.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
+                    <h3>Full Detailing Package</h3>
+                    <p>Complete interior and exterior cleaning, including waxing and tire shine, for a like-new look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Shop Car Cleaning Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1621415990666-8606410e7b53?auto=format&fit=crop&w=300" alt="Bottle of car shampoo" class="product-image">
+                    <h3>Car Shampoo</h3>
+                    <p>High-foam, pH-neutral shampoo for a safe, scratch-free wash.</p>
+                    <div class="product-price">$10.99</div>
+                    <a href="#" class="add-to-cart" data-product="Car Shampoo" data-price="10.99">Add to Cart</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1621415990666-8606410e7b53?auto=format&fit=crop&w=300" alt="Can of wax polish" class="product-image">
+                    <h3>Wax Polish</h3>
+                    <p>Premium carnauba wax for a deep shine and long-lasting protection.</p>
+                    <div class="product-price">$15.99</div>
+                    <a href="#" class="add-to-cart" data-product="Wax Polish" data-price="15.99">Add to Cart</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1621415990666-8606410e7b53?auto=format&fit=crop&w=300" alt="Spray bottle of tire shine" class="product-image">
+                    <h3>Tire Shine</h3>
+                    <p>Non-greasy spray for glossy, black tires that last.</p>
+                    <div class="product-price">$8.99</div>
+                    <a href="#" class="add-to-cart" data-product="Tire Shine" data-price="8.99">Add to Cart</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1621415990666-8606410e7b53?auto=format&fit=crop&w=300" alt="Bottle of interior cleaner" class="product-image">
+                    <h3>Interior Cleaner</h3>
+                    <p>All-purpose cleaner for seats, dashboards, and upholstery.</p>
+                    <div class="product-price">$12.99</div>
+                    <a href="#" class="add-to-cart" data-product="Interior Cleaner" data-price="12.99">Add to Cart</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1621415990666-8606410e7b53?auto=format&fit=crop&w=300" alt="Bottle of glass cleaner" class="product-image">
+                    <h3>Glass Cleaner</h3>
+                    <p>Streak-free formula for crystal-clear windows and mirrors.</p>
+                    <div class="product-price">$9.99</div>
+                    <a href="#" class="add-to-cart" data-product="Glass Cleaner" data-price="9.99">Add to Cart</a>
+                </div>
+            </div>
+            <!-- Checkout Section -->
+            <section id="checkout" class="checkout">
+                <div class="container">
+                    <h2>Your Cart</h2>
+                    <div class="cart-summary" id="cartSummary">
+                        <p id="emptyCartMessage">Your cart is empty.</p>
+                    </div>
+                    <a href="#" class="checkout-btn" id="checkoutButton" style="display: none;">Proceed to Checkout</a>
+                    <form class="billing-form" id="billingForm">
+                        <div class="form-group">
+                            <label for="billing-name">Full Name *</label>
+                            <input type="text" id="billing-name" name="billing-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-email">Email Address *</label>
+                            <input type="email" id="billing-email" name="billing-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-address">Billing Address *</label>
+                            <input type="text" id="billing-address" name="billing-address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-number">Card Number *</label>
+                            <input type="text" id="card-number" name="card-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-expiry">Expiry Date (MM/YY) *</label>
+                            <input type="text" id="card-expiry" name="card-expiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-cvc">CVC *</label>
+                            <input type="text" id="card-cvc" name="card-cvc" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Complete Purchase</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="reviews-carousel">
+                <div class="review-card active">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Ernesto Car Care made my SUV look brand new! The interior detailing was spotless, and the wax job had it shining in the sun. Highly recommend!</p>
+                    <p class="reviewer-name">- Lisa Martinez</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">Fantastic service! My car's exterior was polished to perfection, and the team was super professional. Will definitely book again!</p>
+                    <p class="reviewer-name">- Michael Chen</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">The full detailing package was worth every penny. My truck hasn't looked this good since I bought it. Great job, Ernesto!</p>
+                    <p class="reviewer-name">- David Wilson</p>
+                </div>
+                <div class="carousel-nav">
+                    <button id="prevReview"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="nextReview"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Book Now</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Service Description *</label>
+                    <textarea id="description" name="description" placeholder="Please describe the car cleaning services you need..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Ernesto Car Care. All rights reserved. Professional car cleaning services you can trust.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize cart
+        let cart = [];
+
+        // Update cart display
+        function updateCartDisplay() {
+            const cartSummary = document.getElementById('cartSummary');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+            const checkoutButton = document.getElementById('checkoutButton');
+            const cartCount = document.getElementById('cartCount');
+            const billingForm = document.getElementById('billingForm');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + item.quantity * item.price, 0).toFixed(2);
+
+            cartCount.textContent = totalItems;
+            cartSummary.innerHTML = '';
+
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = 'block';
+                checkoutButton.style.display = 'none';
+                billingForm.classList.remove('active');
+            } else {
+                emptyCartMessage.style.display = 'none';
+                checkoutButton.style.display = 'block';
+
+                cart.forEach((item, index) => {
+                    const cartItem = document.createElement('div');
+                    cartItem.classList.add('cart-item');
+                    cartItem.innerHTML = `
+                        <span>${item.name} x${item.quantity} ($${item.price * item.quantity})</span>
+                        <button class="remove-item" data-index="${index}">Remove</button>
+                    `;
+                    cartSummary.appendChild(cartItem);
+                });
+
+                const totalDiv = document.createElement('div');
+                totalDiv.classList.add('cart-total');
+                totalDiv.textContent = `Total: $${totalPrice}`;
+                cartSummary.appendChild(totalDiv);
+
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const index = parseInt(this.getAttribute('data-index'));
+                        cart.splice(index, 1);
+                        updateCartDisplay();
+                    });
+                });
+            }
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            if (!data.name || !data.email || !data.phone || !data.description) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            alert('Thank you for your request! We will contact you within 24 hours to schedule your car cleaning.');
+            this.reset();
+        });
+
+        // Add to cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const product = this.getAttribute('data-product');
+                const price = parseFloat(this.getAttribute('data-price'));
+
+                const existingItem = cart.find(item => item.name === product);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ name: product, price: price, quantity: 1 });
+                }
+
+                document.getElementById('checkout').classList.add('active');
+                updateCartDisplay();
+            });
+        });
+
+        // Cart icon click
+        document.getElementById('cartIcon').addEventListener('click', function() {
+            const checkoutSection = document.getElementById('checkout');
+            checkoutSection.classList.add('active');
+            checkoutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            updateCartDisplay();
+        });
+
+        // Checkout button
+        document.getElementById('checkoutButton').addEventListener('click', function(e) {
+            e.preventDefault();
+            const billingForm = document.getElementById('billingForm');
+            billingForm.classList.toggle('active');
+            if (billingForm.classList.contains('active')) {
+                billingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+
+        // Billing form submission
+        document.getElementById('billingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            if (!data['billing-name'] || !data['billing-email'] || !data['billing-address'] || 
+                !data['card-number'] || !data['card-expiry'] || !data['card-cvc']) {
+                alert('Please fill in all required billing fields.');
+                return;
+            }
+            const purchasedItems = cart.map(item => `${item.name} x${item.quantity}`).join(', ');
+            alert(`Thank you for purchasing ${purchasedItems}! Your payment has been processed.`);
+            cart = [];
+            this.reset();
+            this.classList.remove('active');
+            document.getElementById('checkout').classList.remove('active');
+            updateCartDisplay();
+        });
+
+        // Reviews carousel
+        const reviewCards = document.querySelectorAll('.review-card');
+        let currentReview = 0;
+
+        function showReview(index) {
+            reviewCards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+            });
+        }
+
+        document.getElementById('nextReview').addEventListener('click', () => {
+            currentReview = (currentReview + 1) % reviewCards.length;
+            showReview(currentReview);
+        });
+
+        document.getElementById('prevReview').addEventListener('click', () => {
+            currentReview = (currentReview - 1 + reviewCards.length) % reviewCards.length;
+            showReview(currentReview);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 123, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #007bff 0%, #1a1a1a 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .product-card, .review-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
