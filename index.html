@@ -413,6 +413,51 @@
             box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
         }
 
+        /* Payment Methods Section */
+        .payment-methods {
+            padding: 50px 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .payment-methods h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .payment-logos img {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .policy-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .policy-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .policy-links a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
         /* Checkout Section */
         .checkout {
             padding: 50px 0;
@@ -856,6 +901,19 @@
             .policy-content {
                 padding: 2rem;
             }
+
+            .payment-logos img {
+                height: 30px;
+            }
+
+            .payment-logos {
+                gap: 1rem;
+            }
+
+            .policy-links {
+                gap: 1rem;
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -1040,6 +1098,48 @@
                     </form>
                 </div>
             </section>
+            <!-- Payment Methods Section -->
+            <section class="payment-methods">
+                <div class="container">
+                    <h2>Payment Methods</h2>
+                    <div class="payment-logos">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Cash_App_logo.svg" alt="Cash App logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Credit_card_icon.svg" alt="Credit/Debit Card logo">
+                    </div>
+                    <div class="policy-links">
+                        <a href="#return-policy">Return Policy</a>
+                        <a href="#cancellation-policy">Cancellation Policy</a>
+                        <a href="#privacy-policy">Privacy Policy</a>
+                        <a href="#terms-conditions">Terms & Conditions</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Cancellation Policy Section -->
+            <section id="cancellation-policy" class="policy-section">
+                <div class="container">
+                    <div class="policy-content">
+                        <h2>Cancellation Policy</h2>
+                        <p>Last updated: June 5, 2025</p>
+                        <p>We understand plans can change. Our cancellation policy ensures flexibility while maintaining fairness.</p>
+                        <h3>Service Cancellations</h3>
+                        <p>Cancellations for booked services must be made at least 48 hours in advance:</p>
+                        <ul>
+                            <li>Cancellations within 48 hours are eligible for a full refund.</li>
+                            <li>Cancellations within 24 hours may incur a 50% fee.</li>
+                            <li>No-shows or same-day cancellations are non-refunded.</li>
+                        </ul>
+                        <h3>Product Order Cancellations</h3>
+                        <p>Orders can be cancelled before shipment:</p>
+                        <ul>
+                            <li>Contact us at <a href="tel:+18187493839">+1-818-749-3839</a> to cancel.</li>
+                            <li>Once shipped, orders fall under our return policy.</li>
+                        </ul>
+                        <p>Please contact us for any cancellation requests.</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 
@@ -1196,6 +1296,7 @@
                         <li><a href="#privacy-policy" aria-label="Privacy Policy">Privacy Policy</a></li>
                         <li><a href="#return-policy" aria-label="Return Policy">Return Policy</a></li>
                         <li><a href="#terms-conditions" aria-label="Terms and Conditions">Terms & Conditions</a></li>
+                        <li><a href="#cancellation-policy" aria-label="Cancellation Policy">Cancellation Policy</a></li>
                     </ul>
                 </nav>
             </div>
@@ -1271,7 +1372,7 @@
         });
 
         // Policy section toggle
-        document.querySelectorAll('.footer-nav a').forEach(link => {
+        document.querySelectorAll('.footer-nav a, .policy-links a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href').substring(1);
